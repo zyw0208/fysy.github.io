@@ -1,0 +1,93 @@
+/* 开关按钮容器样式 */
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 34px;
+}
+
+/* 隐藏默认的复选框 */
+.switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+/* 滑块样式 */
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    -webkit-transition: .4s;
+    transition: .4s;
+}
+
+/* 滑块圆形样式 */
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 26px;
+    width: 26px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    -webkit-transition: .4s;
+    transition: .4s;
+}
+
+/* 当复选框被选中时，滑块的背景颜色 */
+input:checked+.slider {
+    background-color: #2196F3;
+}
+
+/* 当复选框被选中时，滑块获得焦点时的样式 */
+input:focus+.slider {
+    box-shadow: 0 0 1px #2196F3;
+}
+
+/* 当复选框被选中时，滑块的移动效果 */
+input:checked+.slider:before {
+    -webkit-transform: translateX(26px);
+    -ms-transform: translateX(26px);
+    transform: translateX(26px);
+}
+
+/* 圆角滑块 */
+.slider.round {
+    border-radius: 34px;
+}
+
+.slider.round:before {
+    border-radius: 50%;
+}
+
+/* 语言切换容器样式 */
+.language-switch-container {
+    z-index: 9;
+    position: fixed;
+    left: 20px;
+    bottom: 20px;
+}
+
+/* 语言标签样式 */
+.language-label {
+    font-size: 14px;
+    margin: 0 5px;
+    color: #333;
+}
+
+.language-label.left {
+    order: 1;
+}
+
+.language-label.right {
+    order: 3;
+}
+
+.switch {
+    order: 2;
+}

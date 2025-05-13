@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>有声地图</title>
+    <link rel="stylesheet" href="css/foundation.css" type="text/css">
+    <link rel="stylesheet" href="css/map.css" type="text/css">
+    <link rel="stylesheet" href="css/elder.css" type="text/css">
+    <link rel="stylesheet" href="css/adapt.css" type="text/css">
+    <link rel="stylesheet" href="css/translation.css" type="text/css">
+    <meta name="viewport" content="initial-scale=1.0, user-scalable=no" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <script src="js/elder.js"></script>
+    <script src="js/map.js"></script>
+</head>
+
+<body>
+    <script
+        src="https://api.map.baidu.com/api?v=2.0&ak=ohrh7ku9a1iUifnZfRaohOc4f09DnsrC&callback=initMap&callback=initMap">
+        </script>
+    <div class="language-switch-container">
+        <span class="language-label left">ZH</span>
+        <label class="switch">
+            <input type="checkbox" id="toggleLanguage">
+            <span class="slider round"></span>
+        </label>
+        <span class="language-label right">EN</span>
+    </div>
+    <header>
+        <nav>
+            <ul>
+                <li>
+                    <a href="index.html">
+                        <span class="nav-text nav-chinese">首页</span>
+                        <span class="nav-text nav-english">Home</span>
+                    </a>
+                </li>
+                <li class="dropdown">
+                    <a href="details.html">
+                        <span class="nav-text nav-chinese">走进非遗</span>
+                        <span class="nav-text nav-english">Explore Heritage</span>
+                    </a>
+                    <div class="dropdown-content">
+                        <a href="details.html?level=national">
+                            <span class="nav-text nav-chinese">国家级非遗</span>
+                            <span class="nav-text nav-english">National Heritage</span>
+                        </a>
+                        <a href="details.html?level=provincial">
+                            <span class="nav-text nav-chinese">省级非遗</span>
+                            <span class="nav-text nav-english">Provincial Heritage</span>
+                        </a>
+                        <a href="details.html?level=municipal">
+                            <span class="nav-text nav-chinese">市级非遗</span>
+                            <span class="nav-text nav-english">Municipal Heritage</span>
+                        </a>
+                    </div>
+                </li>
+                <li>
+                    <a href="map.html">
+                        <span class="nav-text nav-chinese">非遗地图</span>
+                        <span class="nav-text nav-english">Heritage Map</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="login.html">
+                        <span class="nav-text nav-chinese">登录</span>
+                        <span class="nav-text nav-english">login</span>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="box">
+        <div id="container"></div>
+        <!-- 搜索框 -->
+        <div id="searchContainer">
+            <input type="text" id="searchInput" placeholder="输入搜索内容...">
+            <button id="searchButton">搜索</button>
+        </div>
+        <div id="results"></div>
+    </div>
+
+
+
+    <!-- 城市 区域 地点 -->
+    <!-- <select name="" id="city">
+        <option value="">杭州市</option>
+    </select>
+    <select name="" id="area">
+        <option value="">钱塘区</option>
+    </select>
+    <select name="" id="place">
+        <option value="">地点</option>
+    </select> -->
+
+
+</body>
+<script src="js/anniu.js"></script>
+<script src="https://cdn.staticfile.net/translate.js/3.2.1/translate.js"></script>
+</html>

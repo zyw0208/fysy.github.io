@@ -1,0 +1,272 @@
+/* 统一标题*/
+section {
+    margin: 100px auto;
+    width: 1200px;
+}
+
+.section-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 40px;
+}
+
+
+/* 统一标题样式 */
+.hero-title-container {
+    margin: -40px 0 95px 0;
+    text-align: center;
+    font-family: '宋体';
+    color: #573929f5;
+    position: relative;
+    height: 50px; 
+}
+
+.hero-title-container h1 {
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    width: 100%;
+    transition: opacity 0.4s ease;
+}
+
+.chinese-text1 {
+    font-size: 37px;
+    letter-spacing: 1em;
+    opacity: 1; /* 默认显示中文 */
+}
+
+.english-text1 {
+    font-size: 27px;
+    letter-spacing: normal; /* 重置英文字母间距 */
+    opacity: 0; /* 默认隐藏英文 */
+}
+
+
+.title-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: #333;
+}
+
+.title-wrapper h2 {
+    font-size: 26px;
+    margin-left: 2px;
+}
+
+.title-wrapper .subtitle {
+    color: #9b6525;
+    font-size: 14px;
+    margin-left: 2px;
+}
+
+
+/* 级别 */
+.cards-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+}
+
+.card {
+    border-radius: 10px;
+    overflow: hidden;
+    background: #522309;
+    box-shadow: -5px 3px 5px rgb(0, 0, 0, 0.5);
+    transition: transform 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+.card-image {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.card-content {
+    background-color: #c6b092;
+    padding: 20px;
+}
+
+.card-title {
+    font-size: 18px;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.card-description {
+    font-size: 14px;
+    color: #666;
+    line-height: 1.5;
+    margin-bottom: 15px;
+}
+
+/* 新闻左边 */
+ .news-container {
+     display: flex;
+     flex-direction: column;
+     gap: 2rem;
+     margin: 0 auto;
+     padding: 1rem;
+ }
+
+ /* 图片部分 - 居中 */
+ .featured-news {
+     display: flex;
+     justify-content: center;
+ }
+
+ .news-image {
+     width: 100%;
+     max-width: 800px;
+     height: 22.5rem;
+     border-radius: 0.75rem;
+     overflow: hidden;
+     transition: 0.6s;
+ }
+
+ .news-image img {
+     width: 100%;
+     height: 100%;
+     object-fit: cover;
+ }
+
+ .news-image:hover {
+     transform: scale(1.01);
+ }
+
+ /* 新闻列表部分 - 三列布局 */
+ .news-list {
+     display: grid;
+     grid-template-columns: repeat(3, 1fr);
+     gap: 2rem;
+ }
+
+ .news-item {
+     display: flex;
+     flex-direction: column;
+     border-bottom: 1px solid #eee;
+     padding-bottom: 1rem;
+ }
+
+ .news-date {
+     color: #999;
+     margin-bottom: 0.5rem;
+     /* font-size: 0.9rem; */
+ }
+
+ .news-content h3 {
+     color: #333;
+     margin-bottom: 0.5rem;
+ }
+
+ .news-content p {
+    font-size: large;
+     color: #666;
+     line-height: 1.6;
+     font-size: 0.9rem;
+ }
+
+ a {
+    font-size: 16px;
+     color: black;
+     text-decoration: none;
+ }
+
+ a:hover {
+     color: #9A1F1A;
+     text-decoration: underline;
+ }
+
+ /* 响应式设计 - 小屏幕时变为单列 */
+ @media (max-width: 768px) {
+     .news-list {
+         grid-template-columns: 1fr;
+     }
+ }
+
+/* 类别 */
+.category-container {
+    display: flex;
+    height: 300px;
+    margin: auto;
+    background-color: #522309;
+}
+
+.category-box {
+    flex: 1;
+    display: flex;
+    overflow: hidden;
+    position: relative;
+    background-color: #654d4d;
+}
+
+.category-box img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: brightness(0.7) grayscale(30%);
+    transition: all 0.4s ease;
+}
+.category-box:hover img {
+    transform: scale(1.05);
+    filter: brightness(0.9) grayscale(10%);
+}
+/* .category-box h1 {
+    z-index: 1;
+    margin: 35px 0 0 100px;
+    font-size: 38px;
+    letter-spacing: 0.5em;
+    font-family: '宋体';
+    color: white;
+    position: absolute;
+    writing-mode: vertical-rl;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+} */
+
+/* 图片上的文字样式 */
+.category-box h1 {
+    z-index: 1;
+    font-family: '宋体';
+    color: white;
+    position: absolute;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+    opacity: 0; /* 默认隐藏所有文字 */
+    transition: all 0.4s ease;
+}
+
+/* 中文文字样式 - 竖排 */
+.chinese-text {
+    margin: 35px 0 0 100px;
+    font-size: 38px;
+    letter-spacing: 0.5em;
+    writing-mode: vertical-rl;
+    opacity: 1; /* 默认显示中文 */
+}
+
+/* 英文文字样式 - 横排并自适应 */
+.english-text {
+    margin: 20px;
+    font-size: 22px;
+    letter-spacing: 0.1em;
+    writing-mode: horizontal-tb;
+    text-align: center;
+    width: calc(100% - 40px); /* 适应图片宽度 */
+    border-top: 20px; /* 定位到图片底部 */
+}
+
+/* 语言切换时的显示控制 */
+/* 图片 */
+body.chinese .chinese-text { opacity: 1; }
+body.chinese .english-text { opacity: 0; }
+body.english .chinese-text { opacity: 0; }
+body.english .english-text { opacity: 1; }
+/* 标题 */
+body.chinese .chinese-text1 { opacity: 1; }
+body.chinese .english-text1 { opacity: 0; }
+body.english .chinese-text1 { opacity: 0; }
+body.english .english-text1 { opacity: 1; }

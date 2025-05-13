@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>非遗详情 - 绍兴非物质文化遗产</title>
+  <link rel="stylesheet" href="css/foundation.css" type="text/css">
+  <link rel="stylesheet" href="css/details.css" type="text/css">
+  <link rel="stylesheet" href="css/elder.css" type="text/css">
+  <link rel="stylesheet" href="css/adapt.css" type="text/css">
+  <link rel="stylesheet" href="css/translation.css" type="text/css">
+  <link rel="stylesheet" href="css/heritagedetail.css" type="text/css">
+  <script src="js/elder.js"></script>
+</head>
+
+<body>
+  <div class="language-switch-container">
+    <span class="language-label left">ZH</span>
+    <label class="switch">
+      <input type="checkbox" id="toggleLanguage">
+      <span class="slider round"></span>
+    </label>
+    <span class="language-label right">EN</span>
+  </div>
+  <!-- 与首页相同的header -->
+  <header>
+    <nav>
+      <ul>
+        <li>
+          <a href="index.html">
+            <span class="nav-text nav-chinese">首页</span>
+            <span class="nav-text nav-english">Home</span>
+          </a>
+        </li>
+        <li class="dropdown">
+          <a href="details.html">
+            <span class="nav-text nav-chinese">走进非遗</span>
+            <span class="nav-text nav-english">Explore Heritage</span>
+          </a>
+          <div class="dropdown-content">
+            <a href="details.html?level=national">
+              <span class="nav-text nav-chinese">国家级非遗</span>
+              <span class="nav-text nav-english">National Heritage</span>
+            </a>
+            <a href="details.html?level=provincial">
+              <span class="nav-text nav-chinese">省级非遗</span>
+              <span class="nav-text nav-english">Provincial Heritage</span>
+            </a>
+            <a href="details.html?level=municipal">
+              <span class="nav-text nav-chinese">市级非遗</span>
+              <span class="nav-text nav-english">Municipal Heritage</span>
+            </a>
+          </div>
+        </li>
+        <li>
+          <a href="map.html">
+            <span class="nav-text nav-chinese">非遗地图</span>
+            <span class="nav-text nav-english">Heritage Map</span>
+          </a>
+        </li>
+        <li>
+          <a href="login.html">
+            <span class="nav-text nav-chinese">登录</span>
+            <span class="nav-text nav-english">login</span>
+          </a>
+        </li>
+      </ul>
+    </nav>
+    <div class="banner">
+      <img src="img/banner.jpg">
+    </div>
+  </header>
+  <!-- 详情页内容 -->
+  <div class="heritage-detail">
+    <!-- 面包屑导航 -->
+    <div class="breadcrumb">
+      <a href="index.html"><img src="img/首页.png" alt="首页" class="home-icon"></a>
+      <span> /</span>
+      <a href="details.html">走进非遗</a>
+      <span>/</span>
+      <a href="details.html?level=national" id="level-link">国家级非遗</a>
+      <span>/</span>
+      <span id="current-item">项目详情</span>
+    </div>
+
+    <!-- 主要内容区 -->
+    <div class="detail-main">
+      <!-- 标题区 -->
+      <div class="title-section">
+        <h1 class="detail-title" id="detail-title">项目名称</h1>
+        <div class="title-meta">
+          <span id="detail-category">传统技艺</span>
+          <span class="divider">|</span>
+          <span id="detail-level">国家级非遗</span>
+          <span class="divider">|</span>
+          <span id="detail-region">浙江省绍兴市</span>
+        </div>
+      </div>
+      <!-- 主图展示 -->
+      <div class="main-image-container">
+        <img id="detail-image" src="" alt="非遗项目图片">
+        <div class="image-caption" id="image-caption">绍兴非物质文化遗产代表性项目</div>
+      </div>
+
+
+      <div class="detail-description" id="detail-description">
+        项目详细描述内容将在这里展示...
+      </div>
+
+
+      <!-- 操作按钮 -->
+      <div class="action-buttons">
+        <button class="action-btn back-btn" onclick="history.back()">
+          <i>←</i>返回列表
+        </button>
+
+      </div>
+    </div>
+  </div>
+</body>
+<script src="js/heritagedetail.js"></script>
+<script src="js/anniu.js"></script>
+<script src="https://cdn.staticfile.net/translate.js/3.2.1/translate.js"></script>
+
+</html>

@@ -1,0 +1,518 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>有声地图</title>
+    <link rel="stylesheet" href="css/foundation.css" type="text/css">
+    <link rel="stylesheet" href="css/details.css" type="text/css">
+    <link rel="stylesheet" href="css/elder.css" type="text/css">
+    <link rel="stylesheet" href="css/adapt.css" type="text/css">
+    <link rel="stylesheet" href="css/translation.css" type="text/css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <script src="js/elder.js"></script>
+</head>
+
+<body>
+    <div class="language-switch-container">
+        <span class="language-label left">ZH</span>
+        <label class="switch">
+            <input type="checkbox" id="toggleLanguage">
+            <span class="slider round"></span>
+        </label>
+        <span class="language-label right">EN</span>
+    </div>
+    <header>
+        <nav>
+            <ul>
+                <li>
+                    <a href="index.html">
+                        <span class="nav-text nav-chinese">首页</span>
+                        <span class="nav-text nav-english">Home</span>
+                    </a>
+                </li>
+                <li class="dropdown">
+                    <a href="details.html">
+                        <span class="nav-text nav-chinese">走进非遗</span>
+                        <span class="nav-text nav-english">Explore Heritage</span>
+                    </a>
+                    <div class="dropdown-content">
+                        <a href="details.html?level=national">
+                            <span class="nav-text nav-chinese">国家级非遗</span>
+                            <span class="nav-text nav-english">National Heritage</span>
+                        </a>
+                        <a href="details.html?level=provincial">
+                            <span class="nav-text nav-chinese">省级非遗</span>
+                            <span class="nav-text nav-english">Provincial Heritage</span>
+                        </a>
+                        <a href="details.html?level=municipal">
+                            <span class="nav-text nav-chinese">市级非遗</span>
+                            <span class="nav-text nav-english">Municipal Heritage</span>
+                        </a>
+                    </div>
+                </li>
+                <li>
+                    <a href="map.html">
+                        <span class="nav-text nav-chinese">非遗地图</span>
+                        <span class="nav-text nav-english">Heritage Map</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="login.html">
+                        <span class="nav-text nav-chinese">登录</span>
+                        <span class="nav-text nav-english">login</span>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+        <div class="banner">
+            <img src="img/banner.jpg">
+        </div>
+    </header>
+
+
+    <section>
+        <div class="heritage-level" id="national-level">
+            <div class="section-header">
+                <div class="title-wrapper">
+                    <div>
+                        <h2 id="section1">国家级非遗</h2>
+                        <div class="subtitle">National Intangible Cultural Heritage</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="content-container">
+                <div class="attractions national-level">
+                    <div class="attraction-card">
+                        <img src="img/梁祝传说.jpg">
+                        <div class="attraction-info">
+                            <h3>梁祝传说</h3>
+                            <p>中国四大民间爱情故事之一，讲述了梁山伯与祝英台的凄美爱情，被誉为“东方的罗密欧与朱丽叶”。</p>
+                        </div>
+                    </div>
+                    <div class="attraction-card">
+                        <img src="img/西施传说.jpg">
+                        <div class="attraction-info">
+                            <h3>西施传说</h3>
+                            <p>中国四大美女之首西施的故乡故事，讲述其浣纱、入吴、助越灭吴的传奇人生，展现胆识与家国情怀。</p>
+                        </div>
+                    </div>
+                    <div class="attraction-card">
+                        <img src="img/嵊州吹打.jpg">
+                        <div class="attraction-info">
+                            <h3>嵊州吹打</h3>
+                            <p>浙江嵊州传统器乐，以锣鼓、唢呐为主，曲调高亢激昂，风格粗犷豪放，常用于节庆婚丧。</p>
+                        </div>
+                    </div>
+                    <div class="attraction-card">
+                        <img src="img/新昌腔调.jpg">
+                        <div class="attraction-info">
+                            <h3>新昌腔调</h3>
+                            <p>浙江新昌独特戏曲声腔，融合高腔、昆曲等元素，唱腔清亮婉转，表演质朴生动，是越剧重要艺术源头之一。</p>
+                        </div>
+                    </div>
+                    <div class="attraction-card">
+                        <img src="img/越剧.jpg">
+                        <div class="attraction-info">
+                            <h3>越剧</h3>
+                            <p>中国第二大剧种，以婉转唱腔、细腻表演著称，多演绎才子佳人题材，被誉为“中国歌剧”。</p>
+                        </div>
+                    </div>
+
+                    <div class="attraction-card">
+                        <img src="img/绍兴平湖调.jpg">
+                        <div class="attraction-info">
+                            <h3>绍兴平湖调</h3>
+                            <p>绍兴传统曲艺，以三弦伴奏、清雅唱腔为特色，文辞典雅，旋律悠扬，盛行于明清文人雅士间。</p>
+                        </div>
+                    </div>
+                    <div class="attraction-card">
+                        <img src="img/绍兴莲花落.jpg">
+                        <div class="attraction-info">
+                            <h3>绍兴莲花落</h3>
+                            <p>绍兴方言说唱艺术，以竹板击节、幽默俚俗见长，多演绎市井故事，充满乡土生活气息。</p>
+                        </div>
+                    </div>
+                    <div class="attraction-card">
+                        <img src="img/嵊州竹编.jpeg">
+                        <div class="attraction-info">
+                            <h3>嵊州竹编</h3>
+                            <p>浙江嵊州传统手工艺，以细篾编织为特色，技法精巧，制品兼具实用与艺术价值。</p>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="more-attractions national-more" style="display:none;">
+                    <div class="attraction-card">
+                        <img src="img/绍兴黄酒酿制技艺.webp">
+                        <div class="attraction-info">
+                            <h3>绍兴黄酒酿制技艺</h3>
+                            <p>中国黄酒典范，以糯米、鉴湖水古法酿造，酒色澄黄，醇香绵长，有“东方名酒之冠”美誉。</p>
+                        </div>
+                    </div>
+                    <div class="attraction-card">
+                        <img src="img/大禹祭典.jpeg">
+                        <div class="attraction-info">
+                            <h3>大禹祭典</h3>
+                            <p>以公祭、民祭等形式纪念治水英雄大禹，展现中华敬贤孝德的传统礼仪文化。</p>
+                        </div>
+                    </div>
+                    <div class="attraction-card">
+                        <img src="img/徐文长故事.jpeg">
+                        <div class="attraction-info">
+                            <h3>徐文长故事</h3>
+                            <p>绍兴民间文学瑰宝，讲述明代才子徐渭机智幽默、惩恶扬善的传奇轶事，展现越地文人风骨与民间智慧。</p>
+                        </div>
+                    </div>
+                    <div class="attraction-card">
+                        <img src="img/绍剧.jpg">
+                        <div class="attraction-info">
+                            <h3>绍剧</h3>
+                            <p>绍兴传统戏剧，以高亢激越的唱腔、豪放粗犷的表演著称，多演绎历史英雄题材，被誉为"越地京剧"。</p>
+                        </div>
+                    </div>
+                    <div class="attraction-card">
+                        <img src="img/绍兴摊簧.webp">
+                        <div class="attraction-info">
+                            <h3>绍兴摊簧</h3>
+                            <p>绍兴传统曲艺，以丝竹伴奏、清雅唱腔为特色，多演绎才子佳人故事，唱词典雅，旋律婉转。</p>
+                        </div>
+                    </div>
+                    <div class="attraction-card">
+                        <img src="img/绍兴词调.jpg">
+                        <div class="attraction-info">
+                            <h3>绍兴词调</h3>
+                            <p>绍兴传统曲艺形式，以典雅唱词、清丽旋律为特色，多演绎文人诗词与传奇故事，明清时期盛行于文人雅集。</p>
+                        </div>
+                    </div>
+                    <div class="attraction-card">
+                        <img src="img/绍兴宣卷.jpg">
+                        <div class="attraction-info">
+                            <h3>绍兴宣卷</h3>
+                            <p>绍兴古老的说唱艺术，以佛道故事和民间传说为题材，韵散结合、说唱相间，具有浓厚的宗教与民俗色彩。</p>
+                        </div>
+                    </div>
+                    <div class="attraction-card">
+                        <img src="img/调吊.jpeg">
+                        <div class="attraction-info">
+                            <h3>调吊</h3>
+                            <p>绍兴独特民间杂技，以绳索悬吊展现高难度肢体技巧，兼具力量与柔韧，明清时期盛行于水乡社戏表演。</p>
+                        </div>
+                    </div>
+                    <div class="attraction-card">
+                        <img src="img/石桥营造技艺.png">
+                        <div class="attraction-info">
+                            <h3>石桥营造技艺</h3>
+                            <p>绍兴传统建筑工艺，以因地制宜、榫卯结构为特色，打造坚固美观的石拱桥，凝聚古代匠人智慧。</p>
+                        </div>
+                    </div>
+                    <div class="attraction-card">
+                        <img src="img/水乡社戏.png">
+                        <div class="attraction-info">
+                            <h3>水乡社戏</h3>
+                            <p>绍兴传统民俗活动，以水上戏台为载体，融合越剧、绍剧等地方戏曲，展现江南水乡独特的文化魅力。</p>
+                        </div>
+                    </div>
+                    <div class="attraction-card">
+                        <img src="img/王羲之传说.jpg">
+                        <div class="attraction-info">
+                            <h3>王羲之传说</h3>
+                            <p>绍兴民间文学瑰宝，围绕"书圣"王羲之的书法轶事与生活智慧展开，如"兰亭雅集""换鹅帖"等故事。</p>
+                        </div>
+                    </div>
+                    <div class="attraction-card">
+                        <img src="img/诸暨西路乱弹.jpg">
+                        <div class="attraction-info">
+                            <h3>诸暨西路乱弹</h3>
+                            <p>浙江诸暨传统戏曲剧种，唱腔高亢激越，表演粗犷豪放，融合徽调、梆子等声腔特色，具有浓郁地方色彩。</p>
+                        </div>
+                    </div>
+                    <div class="attraction-card">
+                        <img src="img/越窑青瓷烧制技艺.jpg">
+                        <div class="attraction-info">
+                            <h3>越窑青瓷烧制技艺</h3>
+                            <p>中国瓷器鼻祖技艺，源自东汉绍兴上虞，以"千峰翠色"的秘色瓷闻名，展现唐宋时期巅峰制瓷工艺。</p>
+                        </div>
+                    </div>
+                    <div class="attraction-card">
+                        <img src="img/绍兴童谣.jpg">
+                        <div class="attraction-info">
+                            <h3>绍兴童谣</h3>
+                            <p>绍兴民间口传文学瑰宝，以吴语方言传唱，内容充满童趣与生活智慧，反映水乡民俗风情。</p>
+                        </div>
+                    </div>
+                    <div class="attraction-card">
+                        <img src="img/绍兴目连戏.jpg">
+                        <div class="attraction-info">
+                            <h3>绍兴目连戏</h3>
+                            <p>中国最古老的民间戏曲之一，以佛经"目连救母"故事为蓝本，融合杂技、歌舞等元素。</p>
+                        </div>
+                    </div>
+                    <div class="attraction-card">
+                        <img src="img/草塔抖狮子.jpg">
+                        <div class="attraction-info">
+                            <h3>草塔抖狮子</h3>
+                            <p>绍兴诸暨传统民俗舞蹈，以竹制狮架配合武术动作，展现刚猛灵动的舞狮技艺，多用于节庆祈福。</p>
+                        </div>
+                    </div>
+                    <div class="attraction-card">
+                        <img src="img/中医诊疗法（绍派伤寒）.jpg">
+                        <div class="attraction-info">
+                            <h3>中医诊疗法（绍派伤寒）</h3>
+                            <p>绍兴特色中医诊疗体系，以张仲景《伤寒论》为基础，结合越地气候与体质特点，独创"六经辨治"理论。</p>
+                        </div>
+                    </div>
+                    <div class="attraction-card">
+                        <img src="img/庙会（绍兴舜王庙会）.jpg">
+                        <div class="attraction-info">
+                            <h3>庙会（绍兴舜王庙会）</h3>
+                            <p>绍兴上虞传统民俗盛典，以祭祀中华始祖舜帝为核心，融合祭祀仪轨、商贸庙市与水乡社戏。</p>
+                        </div>
+                    </div>
+                </div>
+
+
+                <!-- 展开/收起按钮 -->
+                <div class="expand-btn-container">
+                    <button class="expand-button national-toggle">
+                        <span>
+                            <p>展开查看更多国家级非遗</p>
+                        </span>
+                        <svg class="expand-icon" viewBox="0 0 24 24" width="20" height="20">
+                            <path d="M7 10l5 5 5-5z" fill="currentColor" />
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+
+        <!-- 省级 -->
+        <div class="heritage-level" id="provincial-level">
+            <div class="section-header" style="margin-top: 40px;">
+                <div class="title-wrapper">
+                    <div>
+                        <h2 id="section2">省级非遗</h2>
+                        <div class="subtitle">Provincial Intangible Cultural Heritage</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="content-container">
+                <div class="attractions provincial-level">
+                    <div class="attraction-card">
+                        <img src="img/谢安故事.png">
+                        <div class="attraction-info">
+                            <h3>谢安故事</h3>
+                            <p>绍兴上虞民间文学瑰宝，讲述东晋名相谢安隐居东山、淝水之战等传奇事迹，彰显"东山再起"的智慧与气度。</p>
+                        </div>
+                    </div>
+                    <div class="attraction-card">
+                        <img src="img/新昌叠罗汉.webp">
+                        <div class="attraction-info">
+                            <h3>新昌叠罗汉</h3>
+                            <p>浙江新昌传统民俗绝技，以人体叠搭形成多层造型，融合武术、杂技与舞蹈，展现力量与平衡之美，常见于节庆庙会表演。</p>
+                        </div>
+                    </div>
+                    <div class="attraction-card">
+                        <img src="img/骨木镶嵌.png">
+                        <div class="attraction-info">
+                            <h3>骨木镶嵌</h3>
+                            <p>宁波传统工艺瑰宝，以牛骨、象牙、木材为料，通过精雕镶嵌制成图案华美的家具器物，兼具实用与艺术价值。</p>
+                        </div>
+                    </div>
+                    <div class="attraction-card">
+                        <img src="img/绍兴传统木船制造技艺.webp">
+                        <div class="attraction-info">
+                            <h3>绍兴传统木船制造技艺</h3>
+                            <p>绍兴水乡千年造船工艺，以樟木、杉木为材，榫卯结构衔接，打造乌篷船等特色船只，兼具实用性与水乡美学。</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="more-attractions provincial-more" style="display:none;">
+                    <div class="attraction-card">
+                        <img src="img/安昌腊肠制作技艺.webp">
+                        <div class="attraction-info">
+                            <h3>安昌腊肠制作技艺</h3>
+                            <p>绍兴安昌百年传统工艺，以本地猪肉、手工肠衣古法灌制，经天然晾晒发酵，咸鲜甘香，被誉为"江南腊味之冠"。</p>
+                        </div>
+                    </div>
+                    <div class="attraction-card">
+                        <img src="img/次坞打面制作技艺.jpg">
+                        <div class="attraction-info">
+                            <h3>次坞打面制作技艺</h3>
+                            <p>诸暨传统面食工艺，以竹杠压面、手工捶打而成，面条劲道爽滑，汤头鲜浓，传承六百余年江南面食文化。</p>
+                        </div>
+                    </div>
+                    <div class="attraction-card">
+                        <img src="img/紫阆黄公糕制作技艺.webp">
+                        <div class="attraction-info">
+                            <h3>紫阆黄公糕制作技艺</h3>
+                            <p>诸暨紫阆传统茶点，以糯米粉、桂花、蜂蜜为料，经九蒸九晒古法制作，口感绵密清甜，传为元代黄公望隐居时所创。</p>
+                        </div>
+                    </div>
+                    <div class="attraction-card">
+                        <img src="img/嵊州小笼制作技艺.jpg">
+                        <div class="attraction-info">
+                            <h3>嵊州小笼制作技艺</h3>
+                            <p>绍兴嵊州传统面点工艺，以"薄皮十八褶"、"现包现蒸"为特色，馅鲜汁丰，传承百年江南点心精髓。</p>
+                        </div>
+                    </div>
+                    <div class="attraction-card">
+                        <img src="img/传统中医药文化.webp">
+                        <div class="attraction-info">
+                            <h3>传统中医药文化</h3>
+                            <p>绍兴柯桥千年医药传承，融合越医"绍派伤寒"诊疗技艺与地道药材炮制工艺，形成"因时因地、简便验廉"的独特体系。</p>
+                        </div>
+                    </div>
+                    <div class="attraction-card">
+                        <img src="img/新昌张氏伤科.webp">
+                        <div class="attraction-info">
+                            <h3>新昌张氏伤科</h3>
+                            <p>绍兴新昌百年中医正骨流派，以"手法复位、杉皮固定、草药外敷"为特色，专治骨伤筋伤，传承六代医脉。</p>
+                        </div>
+                    </div>
+                    <div class="attraction-card">
+                        <img src="img/新昌郑氏肝胆病中草药疗法.webp">
+                        <div class="attraction-info">
+                            <h3>新昌郑氏肝胆病中草药疗法</h3>
+                            <p>绍兴新昌百年中医秘技，以"疏肝利胆三法"为核心，配伍四明山道地草药，形成独具越医特色的肝胆病诊疗体系。</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="expand-btn-container">
+                    <button class="expand-button provincial-toggle">
+                        <span>
+                            <p>展开查看更多省级非遗</p>
+                        </span>
+                        <svg class="expand-icon" viewBox="0 0 24 24" width="20" height="20">
+                            <path d="M7 10l5 5 5-5z" fill="currentColor" />
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <div class="heritage-level" id="municipal-level">
+            <div class="section-header" style="margin-top: 40px;">
+                <div class="title-wrapper">
+                    <div>
+                        <h2 id="section3">市级非遗</h2>
+                        <div class="subtitle">Municipal Intangible Cultural Heritage</div>
+                    </div>
+                </div>
+            </div>
+            <div class="content-container">
+                <div class="attractions municipal-level">
+                    <div class="attraction-card">
+                        <img src="img/王阳明故事.webp">
+                        <div class="attraction-info">
+                            <h3>王阳明故事</h3>
+                            <p>绍兴余姚人文瑰宝，讲述明代大儒王守仁龙场悟道、平定叛乱、创立心学的传奇人生，诠释"知行合一"的哲学智慧。</p>
+                        </div>
+                    </div>
+                    <div class="attraction-card">
+                        <img src="img/烙画.png">
+                        <div class="attraction-info">
+                            <h3>烙画</h3>
+                            <p>越地传统火针刺绣技艺，以檀木、竹简为胚，通过控温烙笔勾画越中山水、人物，呈现焦墨晕染的独特东方美学。</p>
+                        </div>
+                    </div>
+                    <div class="attraction-card">
+                        <img src="img/绍兴金石碑版雕刻技艺.jpg">
+                        <div class="attraction-info">
+                            <h3>绍兴金石碑版雕刻技艺</h3>
+                            <p>绍兴千年石刻绝艺，以青石为材，融合书法、绘画与刀工，专擅摩崖题刻、碑碣镌刻，传承"刀笔相生"的文人石刻传统。</p>
+                        </div>
+                    </div>
+                    <div class="attraction-card">
+                        <img src="img/会稽金石传拓技艺.jpg">
+                        <div class="attraction-info">
+                            <h3>会稽金石传拓技艺</h3>
+                            <p>绍兴千年碑拓绝艺，以宣纸、墨扑精准拓印摩崖碑刻，完美再现金石神韵，被誉为"碑石上的复印术"。</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="more-attractions municipal-more" style="display:none;">
+
+                    <div class="attraction-card">
+                        <img src="img/千层底布鞋制作技艺.jpg">
+                        <div class="attraction-info">
+                            <h3>千层底布鞋制作技艺</h3>
+                            <p>绍兴传统制鞋工艺,以36层纯棉粗布纳成千层底,手工绗缝2000余针,成就透气耐磨的"会稽软履"。</p>
+                        </div>
+                    </div>
+                    <div class="attraction-card">
+                        <img src="img/绍兴合香炮制技艺.webp">
+                        <div class="attraction-info">
+                            <h3>绍兴合香炮制技艺</h3>
+                            <p>绍兴千年香道绝艺，精选越地香草药材，依古法"君臣佐使"配伍，制成避瘟安神的传统合香，传承宋代《陈氏香谱》精髓。</p>
+                        </div>
+                    </div>
+                    <div class="attraction-card">
+                        <img src="img/绍兴传统植物染料染色技艺.webp">
+                        <div class="attraction-info">
+                            <h3>绍兴传统植物染料染色技艺</h3>
+                            <p>江南水乡千年染缬工艺，以蓝草、茜草等草木为料，经发酵、浸染等古法工序，呈现"青如天、润如玉"的越地特色色韵。</p>
+                        </div>
+                    </div>
+                    <div class="attraction-card">
+                        <img src="img/绍兴赵氏宋六陵祭典.webp">
+                        <div class="attraction-info">
+                            <h3>绍兴赵氏宋六陵祭典</h3>
+                            <p>南宋皇陵传统祭祀仪轨，以"三献九礼"为核心，完整保留宋代官祭礼制，传承八百余年宗庙文化。</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="expand-btn-container">
+                    <button class="expand-button municipal-toggle">
+                        <span>
+                            <p>展开查看更多市级非遗</p>
+                        </span>
+                        <svg class="expand-icon" viewBox="0 0 24 24" width="20" height="20">
+                            <path d="M7 10l5 5 5-5z" fill="currentColor" />
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>关于我们</h4>
+                    <p>我们致力于提供优质的产品和服务，让科技改变生活。</p>
+                </div>
+
+                <div class="footer-section">
+                    <h4>联系我们</h4>
+                    <ul class="footer-links">
+                        <li><i class="fas fa-map-marker-alt"></i> 地址地址地址</li>
+                        <li><i class="fas fa-phone"></i> 电话电话电话</li>
+                        <li><i class="fas fa-envelope"></i> 邮箱邮箱邮箱</li>
+                    </ul>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-weixin"></i></a>
+                        <a href="#"><i class="fab fa-weibo"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>版权所有&copy; 2025 名称名称名称名称</p>
+            </div>
+        </div>
+    </footer>
+</body>
+<script src="js/datails.js"></script>
+<script src="js/anniu.js"></script>
+<script src="https://cdn.staticfile.net/translate.js/3.2.1/translate.js"></script>
+
+</html>

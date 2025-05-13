@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>有声地图</title>
+    <link rel="stylesheet" href="css/foundation.css" type="text/css">
+    <link rel="stylesheet" href="css/index.css" type="text/css">
+    <link rel="stylesheet" href="css/elder.css" type="text/css">
+    <link rel="stylesheet" href="css/adapt.css" type="text/css">
+    <link rel="stylesheet" href="css/translation.css" type="text/css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <script src="js/elder.js"></script>
+</head>
+<body>
+    <div class="language-switch-container">
+        <span class="language-label left">ZH</span>
+        <label class="switch">
+            <input type="checkbox" id="toggleLanguage">
+            <span class="slider round"></span>
+        </label>
+        <span class="language-label right">EN</span>
+    </div>
+    <header>
+        <nav>
+            <ul>
+                <li>
+                    <a href="index.html">
+                        <span class="nav-text nav-chinese">首页</span>
+                        <span class="nav-text nav-english">Home</span>
+                    </a>
+                </li>
+                <li class="dropdown">
+                    <a href="details.html">
+                        <span class="nav-text nav-chinese">走进非遗</span>
+                        <span class="nav-text nav-english">Explore Heritage</span>
+                    </a>
+                    <div class="dropdown-content">
+                        <a href="details.html?level=national">
+                            <span class="nav-text nav-chinese">国家级非遗</span>
+                            <span class="nav-text nav-english">National Heritage</span>
+                        </a>
+                        <a href="details.html?level=provincial">
+                            <span class="nav-text nav-chinese">省级非遗</span>
+                            <span class="nav-text nav-english">Provincial Heritage</span>
+                        </a>
+                        <a href="details.html?level=municipal">
+                            <span class="nav-text nav-chinese">市级非遗</span>
+                            <span class="nav-text nav-english">Municipal Heritage</span>
+                        </a>
+                    </div>
+                </li>
+                <li>
+                    <a href="map.html">
+                        <span class="nav-text nav-chinese">非遗地图</span>
+                        <span class="nav-text nav-english">Heritage Map</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="login.html">
+                        <span class="nav-text nav-chinese">登录</span>
+                        <span class="nav-text nav-english">login</span>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+        <div class="banner">
+            <img src="img/banner.jpg">
+        </div>
+    </header>
+
+    <section>
+        <div class="hero-title-container">
+            <h1 class="chinese-text1">守护千年越韵 · 传承绍兴非遗</h1>
+            <h1 class="english-text1">Protecting the Thousand-Year Yueyun · Inheriting the Intangible Heritage of Shaoxing</h1>
+        </div>
+        <div class="section-header">
+            <div class="title-wrapper">
+                <div>
+                    <h2>绍兴非遗</h2>
+                    <div class="subtitle">
+                        <p>Shaoxing Intangible Cultural Heritage</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="cards-container">
+            <div class="card">
+                <img src="img/country1.jpg" class="card-image">
+                <div class="card-content">
+                    <h3 class="card-title">国家级非遗</h3>
+                    <p class="card-description">26项</p>
+                    <a href="details.html#section1" class="read-more">查看详情 &gt;&gt;</a>
+                </div>
+            </div>
+            <div class="card">
+                <img src="img/province1.jpg" class="card-image">
+                <div class="card-content">
+                    <h3 class="card-title">省级非遗</h3>
+                    <p class="card-description">96项</p>
+                    <a href="details.html#section2" class="read-more">查看详情&gt;&gt;</a>
+                </div>
+            </div>
+            <div class="card">
+                <img src="img/city1.jpg" class="card-image">
+                <div class="card-content">
+                    <h3 class="card-title">市级非遗</h3>
+                    <p class="card-description">217项</p>
+                    <a href="details.html#section3" class="read-more">查看详情&gt;&gt;</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <section>
+        <div class="section-header">
+            <div class="title-wrapper">
+                <div>
+                    <h2>非遗新闻</h2>
+                    <div class="subtitle">
+                        <p>Intangible Cultural Heritage News</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="news-container">
+            <!-- 左侧 -->
+            <div class="featured-news">
+                <div class="news-image">
+                    <a href="https://mp.weixin.qq.com/s?__biz=MzA5NzkxMDkxMw==&mid=2651692012&idx=1&sn=f7539456f26080bb14f6e6ea5c67bbc2"
+                        target="_blank"><img src="img/wine.webp"></a>
+                </div>
+            </div>
+            <!-- 右侧 -->
+            <div class="news-list">
+                <div class="news-item">
+                    <div class="news-date">
+                        2022<br>
+                        <h3>11-08</h3>
+                    </div>
+                    <div class="news-content">
+                        <h3>水乡社戏展现绍兴民俗风情</h3>
+                        <p><a href="http://ah.people.com.cn/GB/n2/2022/1108/c401574-40185800.html"
+                                target="_blank">2022绍兴首届“水乡社戏”活动开幕，活动包含乌篷船绘画比赛、社戏海选、专业剧团名剧选段表演、社戏会市、乌篷船自由划比赛、社戏晚会等。</a>
+                        </p>
+                    </div>
+                </div>
+                <div class="news-item">
+                    <div class="news-date">
+                        2023<br>
+                        <h3>03-31</h3>
+                    </div>
+                    <div class="news-content">
+                        <h3>萌娃选课“越剧”？戏曲进校园</h3>
+                        <p><a href="https://news.xinmin.cn/2023/03/31/32350525.html" target="_blank">
+                                由徐汇越剧团主创的越剧小戏《书包》荣获2022年上海市群文新人新作展评展演“群文新作”奖。
+                                今年开学，这出获奖小戏被徐汇越剧团带进了校园...</a></p>
+                    </div>
+                </div>
+                <div class="news-item">
+                    <div class="news-date">
+                        2024<br>
+                        <h3>11-07</h3>
+                    </div>
+                    <div class="news-content">
+                        <h3>绍兴黄酒开酿节隆重举行</h3>
+                        <p><a href="https://mp.weixin.qq.com/s?__biz=MzA5NzkxMDkxMw==&mid=2651692012&idx=1&sn=f7539456f26080bb14f6e6ea5c67bbc2"
+                                target="_blank">
+                                立冬是绍兴黄酒冬酿的开启之日，2024年黄酒开酿节在绍兴湖塘街道隆重举行，CCTV13新闻直播间
+                                介绍了绍兴黄酒酿造技艺，展示绍兴黄酒文化独特魅力，一起来看看！</a></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <div class="section-header">
+            <div class="title-wrapper">
+                <div>
+                    <h2>非遗类别</h2>
+                    <div class="subtitle">
+                        <p>Intangible Cultural Heritage Category</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="category-container">
+            <div class="category-box">
+                <h1 class="chinese-text">传统戏剧</h1>
+                <h1 class="english-text">Traditional Drama</h1>
+                <img src="img/category1.jpg">
+            </div>
+            <div class="category-box">
+                <h1 class="chinese-text">民间文学</h1>
+                <h1 class="english-text">Folk Literature</h1>
+                <img src="img/category2.jpg">
+            </div>
+            <div class="category-box">
+                <h1 class="chinese-text">传统音乐</h1>
+                <h1 class="english-text">Traditional Music</h1>
+                <img src="img/category3.jpg">
+            </div>
+            <div class="category-box">
+                <h1 class="chinese-text">传统舞蹈</h1>
+                <h1 class="english-text">Traditional Dance</h1>
+                <img src="img/category4.jpg">
+            </div>
+            <div class="category-box">
+                <h1 class="chinese-text" style="margin-top: 75px;letter-spacing: 1em;">曲艺</h1>
+                <h1 class="english-text">Quyi</h1>
+                <img src="img/category5.jpg">
+            </div>
+        </div>
+        <div class="category-container">
+            <div class="category-box">
+                <h1 class="chinese-text">传统体育</h1>
+                <h1 class="english-text">Traditional Sport</h1>
+                <img src="img/category6.png">
+            </div>
+            <div class="category-box">
+                <h1 class="chinese-text">传统美术</h1>
+                <h1 class="english-text">Traditional Art</h1>
+                <img src="img/category7.jpg">
+            </div>
+            <div class="category-box">
+                <h1 class="chinese-text">传统技艺</h1>
+                <h1 class="english-text">Traditional Craft</h1>
+                <img src="img/category8.jpg">
+            </div>
+            <div class="category-box">
+                <h1 class="chinese-text">传统医药</h1>
+                <h1 class="english-text">Traditional Medicine</h1>
+                <img src="img/category9.jpg">
+            </div>
+            <div class="category-box">
+                <h1 class="chinese-text" style="margin-top: 75px;letter-spacing: 1em;">民俗</h1>
+                <h1 class="english-text">Folk Customs</h1>
+                <img src="img/category10.jpg">
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>关于我们</h4>
+                    <p>我们致力于提供优质的产品和服务，让科技改变生活。</p>
+                </div>
+
+                <div class="footer-section">
+                    <h4>联系我们</h4>
+                    <ul class="footer-links">
+                        <li><i class="fas fa-map-marker-alt"></i> 地址地址地址</li>
+                        <li><i class="fas fa-phone"></i> 电话电话电话</li>
+                        <li><i class="fas fa-envelope"></i> 邮箱邮箱邮箱</li>
+                    </ul>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-weixin"></i></a>
+                        <a href="#"><i class="fab fa-weibo"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>版权所有&copy; 2025 名称名称名称名称</p>
+            </div>
+        </div>
+    </footer>
+</body>
+<script src="js/anniu.js"></script>
+<script src="https://cdn.staticfile.net/translate.js/3.2.1/translate.js"></script>
+</html>

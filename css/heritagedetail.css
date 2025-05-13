@@ -1,0 +1,184 @@
+
+        /* 详情页专用样式 */
+        .heritage-detail {
+            max-width: 1200px;
+            margin: 40px auto;
+            padding: 0 20px;
+        }
+        
+        /* 面包屑导航 */
+        /* .breadcrumb {
+            padding: 15px 0;
+            font-size: 14px;
+            color: #666;
+        }
+        .home-icon {
+            width: 16px;  
+            height: 16px; 
+            vertical-align: middle; 
+        }
+        .breadcrumb a {
+            color: #1a73e8;
+            text-decoration: none;
+        }
+        .breadcrumb a:hover {
+            text-decoration: underline;
+        }
+        .breadcrumb span {
+            margin: 0 5px;
+            color: #999;
+        }
+         */
+
+         .breadcrumb {
+            display: flex;
+            align-items: center;
+            padding: 15px 0;
+            font-size: 16px;
+            background-color: rgba(0, 0, 0, 0.1);
+            backdrop-filter: blur(8px);
+            padding-left: 10%;
+            margin-bottom: 20px;
+        }
+        
+        .breadcrumb a {
+            text-decoration: none;
+            color: black;
+            font-weight: bold;
+            position: relative;
+            transition: 0.3s;
+            display: flex;
+            align-items: center;
+        }
+        
+        .breadcrumb a:hover {
+            color: white;
+            font-weight: bolder;
+        }
+        
+        .breadcrumb a::after {
+            content: '';
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            bottom: -5px;
+            width: 0;
+            height: 1px;
+            background: white;
+            transition: 0.3s;
+        }
+        
+        .breadcrumb a:hover::after {
+            width: 60px;
+        }
+        
+        .breadcrumb span {
+            margin: 0 10px;
+            color: rgba(0, 0, 0, 0.7);
+        }
+        
+        .breadcrumb #current-item {
+            color: white;
+            font-weight: bold;
+        }
+        
+        .home-icon {
+            width: 25px;
+            height: 25px;
+            vertical-align: middle;
+            filter: brightness(0.8);
+            transition: 0.3s;
+        }
+        
+        .breadcrumb a:hover .home-icon {
+            filter: brightness(1.2);
+        }
+        /* 主要内容区 */
+        .detail-main {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        
+        /* 标题区 */
+        .title-section {
+            margin-bottom: 25px;
+        }
+        
+        .detail-title {
+            font-size: 28px;
+            color: #333;
+            margin-bottom: 8px;
+            font-weight: normal;
+            border-bottom: 1px solid #eee;
+            padding-bottom: 10px;
+        }
+        
+        .title-meta {
+            font-size: 15px;
+            color: #666;
+            margin-bottom: 15px;
+        }
+        
+        .divider {
+            margin: 0 8px;
+            color: #ddd;
+        }
+        
+        /* 主图样式 */
+        .main-image-container {
+            margin: 20px 0;
+            text-align: center;
+        }
+        
+        .main-image-container img {
+            max-width: 50%;
+            height: auto;
+            border-radius: 4px;
+        }
+        
+        .image-caption {
+            font-size: 14px;
+            color: #888;
+            text-align: center;
+            margin-top: 8px;
+            font-style: italic;
+        }
+        
+        /* 项目描述 */
+        .detail-description {
+            font-size: 16px;
+            line-height: 1.8;
+            color: #444;
+            margin: 30px 0;
+        }
+        
+        .detail-description p {
+            margin-bottom: 22px;
+            text-indent: 2em;
+        }
+        
+        /* 操作按钮 */
+        .action-buttons {
+            text-align: right;
+            margin-top: 40px;
+        }
+        
+        .action-btn {
+            background: #f0f0f0;
+            color: #333;
+            border: 1px solid #ddd;
+            padding: 8px 20px;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 15px;
+            transition: all 0.3s;
+        }
+        
+        .action-btn:hover {
+            background: #e0e0e0;
+        }
+        
+        .action-btn i {
+            margin-right: 5px;
+        }

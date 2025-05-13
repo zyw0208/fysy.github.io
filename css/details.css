@@ -1,0 +1,172 @@
+/* 统一标题 */
+.heritage-level {
+    position: relative;
+    margin-bottom: 80px;
+    min-height: 100px;
+
+}
+
+section {
+    margin: 100px auto;
+    /* padding-bottom: 80px;  */
+}
+
+.section-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 40px;
+}
+
+.title-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: #333;
+    margin-left: 112px;
+}
+
+.title-wrapper h2 {
+    font-size: 30px;
+    margin: 0;
+}
+
+.title-wrapper .subtitle {
+    color: #666;
+    font-size: 16px;
+}
+
+/* 一 */
+.content-container {
+    position: relative;
+    padding-bottom: 80px;
+    /* 为按钮留出空间 */
+    width: 100%;
+
+}
+
+.attractions,
+.more-attractions {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    /* grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); */
+    gap: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+
+}
+
+.attraction-card {
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    min-height: 300px;
+    transition: transform 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94),
+        box-shadow 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.attraction-card:hover {
+    transform: scale(1.02);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+}
+
+.attraction-card img {
+    display: block;
+    margin: 0 auto;
+    width: 100%;
+    height: 270px;
+    object-fit: cover;
+}
+
+.attraction-info {
+    padding: 15px;
+    text-align: center;
+}
+
+.attraction-info h3 {
+    margin: 5px 0;
+    font-size: 18px;
+    transition: transform 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94),
+    font-size 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    transform-origin: left center;
+    /* 设置放大原点为左侧 */
+}
+
+.attraction-info p {
+    color: #666;
+    font-size: 14px;
+    line-height: 1.4;
+}
+
+/* 二 */
+/* 展开按钮容器 */
+.expand-btn-container {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    justify-content: center;
+    padding: 20px 0;
+    background: linear-gradient(to top, rgba(255, 255, 255, 0.9) 0%, rgba(255, 255, 255, 0) 100%);
+    z-index: 10;
+}
+
+/* 按钮基础样式 */
+.expand-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 12px 24px;
+    background-color: rgba(0, 0, 0, 0.7);
+    backdrop-filter: blur(8px);
+    color: white;
+    border: none;
+    border-radius: 30px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* 按钮悬停效果 */
+.expand-button:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
+}
+
+/* 按钮文字与图标间距 */
+.expand-button span {
+    margin-right: 8px;
+}
+
+/* 图标动画 */
+.expand-icon {
+    transition: transform 0.3s ease;
+}
+
+/* 收起状态时的图标旋转 */
+.expand-button.active .expand-icon {
+    transform: rotate(180deg);
+}
+
+/* 更多项目展开动画 */
+.more-attractions {
+    display: none;
+    animation: fadeIn 0.5s ease-out;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}

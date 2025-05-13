@@ -1,0 +1,116 @@
+.box {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+}
+
+#container {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+
+#searchContainer {
+    left: 38%;
+    position: absolute;
+    z-index: 9;
+    display: flex;
+    max-width: 600px;
+    margin: 20px auto;
+    box-shadow: 0 2px 0 rgba(0, 0, 0, 0.1);
+    /* border-radius: 30px; */
+    overflow: hidden;
+    transition: all 0.3s ease;
+}
+
+#searchContainer:focus-within {
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+#searchInput {
+    flex: 1;
+    padding: 15px 20px;
+    font-size: 16px;
+    border: none;
+    outline: none;
+    background: #f8f9fa;
+    color: #333;
+    transition: background 0.3s;
+}
+
+#searchInput:focus {
+    background: #fff;
+}
+
+#searchInput::placeholder {
+    color: #aaa;
+}
+
+#searchButton {
+    padding: 0 25px;
+    background: linear-gradient(135deg, #4CAF50, #2E7D32);
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: 500;
+    transition: all 0.3s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#searchButton:hover {
+    background: linear-gradient(135deg, #43A047, #1B5E20);
+}
+
+#searchButton:active {
+    transform: scale(0.98);
+}
+
+#results {
+    width: 245px;
+    /* 圆角稍大于搜索框 */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.12);
+    /* 柔和阴影 */
+    transition: all 0.3s ease;
+    /* 平滑动画 */
+    /* 内容溢出处理 */
+    max-height: 400px;
+    overflow-y: auto;
+    /* 内容过多时滚动 */
+    scrollbar-width: thin;
+    /* 细滚动条 */
+    scrollbar-color: #4CAF50 rgba(0, 0, 0, 0.05);
+    /* 绿色滚动条 */
+    display: none;
+    /* border-radius: 0 0 10px 10px; */
+    margin: 68px 0 0 543px;
+    position: absolute;
+    background-color: #fff;
+    cursor: pointer;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.content-item {
+    padding: 8px 10px;
+}
+
+.content-item:hover {
+    background-color: rgb(240, 240, 240);
+}
+
+.highlight {
+    font-weight: bold;
+}

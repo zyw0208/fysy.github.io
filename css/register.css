@@ -1,0 +1,141 @@
+/* 注册界面 */
+body {
+    background-color: #fcf8ef;
+    min-height: 100vh;
+    background: url('../img/background.jpg') fixed center/cover;
+    
+} 
+.tab-container {
+    display: flex;
+    justify-content: center;
+    margin-top: -50px; /* 向上移动选项卡 */
+    margin-bottom: 30px; /* 增加底部间距 */
+}
+
+.tab-buttons {
+    display: flex;
+    background: rgba(255, 255, 255, 0.9);
+    border-radius: 30px;
+    padding: 5px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    border: 1px solid #f0f0f0;
+}
+
+.tab-button {
+    padding: 10px 30px;
+    border-radius: 25px;
+    text-decoration: none;
+    color: #420983;
+    font-weight: bold;
+    transition: all 0.3s ease;
+    font-size: 14px;
+}
+
+.tab-button.active {
+    background: #e74c3c;
+    color: white;
+    box-shadow: 0 5px 15px rgba(231, 76, 60, 0.3);
+}
+
+.tab-button:not(.active):hover {
+    color: #7a46b6;
+    background: rgba(122, 70, 182, 0.1);
+}
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: calc(100vh - 120px);
+}
+.signup-box {
+    width: 400px;
+    background: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(7px); /* 背景模糊效果 */
+    padding: 80px 40px 40px;
+    border-radius: 10px;
+    box-shadow: 0 20px 20px rgba(0, 0, 0, 0.1);
+    position: relative; 
+    /* margin-top: 60px; */
+}
+.signup-box h2 {
+    margin-bottom: 50px;
+    padding: 0;
+    color: #420983;
+    text-align: center;
+}
+.signup-box .user-box {
+    position: relative;
+    margin-bottom: 25px;
+}
+.signup-box .user-box input {
+    width: 100%;
+    padding: 12px 2px;
+    font-size: 14px;
+    color: #420983;
+    border: 1px solid #ddd;
+    outline: none;
+    background: white;
+    border-radius: 25px;
+    transition: all 0.3s ease;
+}
+.user-box input:focus {
+    border-color: #7a46b6;
+    box-shadow: 0 0 0 2px rgba(122, 70, 182, 0.2);
+}
+.signup-box .user-box label {
+    position: absolute;
+    top: 10px;
+    left: 20px;
+    padding: 0 5px;
+    font-size: 14px;
+    color: #999;
+    pointer-events: none;
+    transition: 0.3s;
+}
+.signup-box .user-box input:focus ~ label,
+.signup-box .user-box input:valid ~ label {
+    top: -10px;
+    left: 15px;
+    color: #7a46b6;
+    font-size: 12px;
+    background: white;
+    z-index: 1;
+}
+.signup-box button {
+    display: block;
+    margin: 0 auto;
+    width: 100px;
+    background: #420983;
+    color: white;
+    border: none;
+    outline: none;
+    padding: 10px;
+    cursor: pointer;
+    font-size: 18px;
+    border-radius: 20px;
+    transition: 0.5s;
+}
+.signup-box button:hover {
+    background:  #7a46b6;
+}
+.signup-box .remember {
+    margin: 15px 0;
+    color: black;
+    cursor: pointer;
+}
+.signup-box .remember:hover {
+    color: #420983;
+}
+.signup-box .login-link {
+    margin-top: 20px;
+    text-align: center;
+    font-size: 16px;
+    color: black;
+}
+.signup-box .login-link a {
+    color: #7a46b6;
+    text-decoration: none;
+}
+.signup-box .login-link a:hover {
+    text-decoration: underline;
+}

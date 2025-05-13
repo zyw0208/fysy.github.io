@@ -1,0 +1,56 @@
+/* 老年模式样式 */
+body.elder-mode {
+    font-size: 20px;
+    line-height: 1.8;
+}
+
+.elder-mode h1 {
+    font-size: 2.5rem;
+}
+
+/* index最后图片内文字 */
+.elder-mode .category-box h1 {
+    font-size: 2.5rem;
+    margin: 35px 0px 0px 90px;
+}
+
+.elder-mode h2 {
+    font-size: 2rem;
+}
+
+.elder-mode h3 {
+    font-size: 1.5rem;
+}
+
+.elder-mode span {
+    font-size: 1.5rem;
+}
+
+.elder-mode a {
+    font-size: 1.25rem;
+}
+
+.elder-mode button {
+    font-size: 1.5rem;
+}
+
+.elder-mode p {
+        font-size: 1.25rem;
+    }
+.elder-mode li a{
+    font-size: 1.5rem;
+}
+
+/* 切换按钮样式 */
+.elder-mode-toggle {
+    position: fixed;
+    right: 20px;
+    bottom: 20px;
+    z-index: 999;
+    padding: 10px 15px;
+    background: #ff9900;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}

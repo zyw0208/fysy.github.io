@@ -1,0 +1,129 @@
+/* 媒体查询，适应小屏幕设备 */
+@media (max-width: 1200px) {
+    section {
+        width: 90%;
+    }
+}
+
+@media (max-width: 768px) {
+    /* 导航栏样式调整 */
+    nav ul {
+        width: 100%;
+        margin-left: 0;
+        justify-content: space-around;
+    }
+
+    nav ul li a {
+        font-size: 16px;
+    }
+
+    /* 卡片布局调整 */
+    .cards-container {
+        grid-template-columns: 1fr;
+    }
+
+    /* 新闻布局调整 */
+    .news-container {
+        flex-direction: column;
+    }
+
+    .featured-news {
+        flex: 1;
+    }
+
+    .news-image {
+        height: auto;
+    }
+
+    /* 类别布局调整 */
+    .category-container {
+        /* flex-direction: column; */
+        height: auto;
+    }
+
+    .category-box {
+        height: 200px;
+    }
+
+    .category-box h1 {
+        margin: 20px 0 0 20px;
+        font-size: 24px;
+    }
+}
+
+@media (max-width: 480px) {
+    section h1 {
+        font-size: 24px;
+        letter-spacing: 0.5em;
+    }
+
+    .title-wrapper h2 {
+        font-size: 20px;
+    }
+
+    .title-wrapper .subtitle {
+        font-size: 12px;
+    }
+
+    .news-date {
+        min-width: 4rem;
+        margin-right: 1rem;
+    }
+
+    .news-content h3 {
+        font-size: 0.9rem;
+    }
+}
+
+/* 地图 */
+@media (max-width: 768px) {
+    #searchContainer {
+        left: 15%;
+        right: 15%;
+        width: 70%;
+        max-width: none;
+        top: 20px; /* 向下移动搜索栏，可以根据需要调整这个值 */
+    }
+
+    #searchInput {
+        padding: 10px 15px;
+        font-size: 14px;
+    }
+
+    #searchButton {
+        padding: 0 20px;
+        font-size: 14px;
+        white-space: nowrap; /* 确保按钮文字不换行 */
+    }
+
+    #results {
+        width: 80%;
+        margin: 70px auto 0; /* 调整结果框的上边距，确保和搜索栏有合适的间距 */
+        left: 10%;
+        right: 10%;
+    }
+}
+
+/* details */
+@media (max-width: 768px) {
+    .attractions,
+    .more-attractions {
+        grid-template-columns: repeat(2, 1fr);
+        justify-items: center; /* 确保网格项在列方向上居中 */
+    }
+    .attraction-card img {
+        height: 200px;
+    }
+}
+
+@media (max-width: 480px) {
+    .attractions,
+    .more-attractions {
+        grid-template-columns: repeat(2, 1fr);
+        justify-items: center; /* 确保网格项在列方向上居中 */
+    }
+    .attraction-card img {
+        height: 150px;
+    }
+}
+

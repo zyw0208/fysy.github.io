@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <link rel="stylesheet" href="css/foundation.css" type="text/css">
+    <title>支付中心</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+        }
+
+        body {
+            background-color: #f5f5f5;
+            color: #333;
+            line-height: 1.5;
+        }
+
+        .container {
+            max-width: 500px;
+            margin: 0 auto;
+            padding: 15px;
+        }
+
+        .header {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .header h1 {
+            font-size: 22px;
+            color: #333;
+        }
+
+        .order-info {
+            background: #fff;
+            border-radius: 10px;
+            padding: 15px;
+            margin-bottom: 15px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+        }
+
+        .order-info .amount {
+            font-size: 28px;
+            font-weight: bold;
+            text-align: center;
+            margin: 10px 0;
+            color: #ff4d4f;
+        }
+
+        .order-info .desc {
+            color: #666;
+            font-size: 14px;
+            margin-bottom: 5px;
+        }
+
+        .payment-methods {
+            background: #fff;
+            border-radius: 10px;
+            padding: 15px;
+            margin-bottom: 15px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+        }
+
+        .payment-title {
+            font-size: 16px;
+            margin-bottom: 15px;
+            font-weight: 500;
+        }
+
+        .payment-method {
+            display: flex;
+            align-items: center;
+            padding: 12px 0;
+            border-bottom: 1px solid #eee;
+        }
+
+        .payment-method:last-child {
+            border-bottom: none;
+        }
+
+        .payment-icon {
+            width: 30px;
+            height: 30px;
+            margin-right: 10px;
+        }
+
+        .payment-name {
+            flex: 1;
+            font-size: 16px;
+        }
+
+        .payment-radio {
+            width: 20px;
+            height: 20px;
+            border: 1px solid #ddd;
+            border-radius: 50%;
+            position: relative;
+        }
+
+        .payment-radio.selected {
+            border-color: #1890ff;
+        }
+
+        .payment-radio.selected:after {
+            content: '';
+            position: absolute;
+            width: 12px;
+            height: 12px;
+            background: #1890ff;
+            border-radius: 50%;
+            top: 3px;
+            left: 3px;
+        }
+
+        .btn-pay {
+            display: block;
+            width: 100%;
+            background: #1890ff;
+            color: white;
+            border: none;
+            border-radius: 25px;
+            padding: 12px;
+            font-size: 16px;
+            font-weight: 500;
+            margin-top: 20px;
+            cursor: pointer;
+        }
+
+        .btn-pay:disabled {
+            background: #ccc;
+            cursor: not-allowed;
+        }
+
+        .loading {
+            display: none;
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        .loading-spinner {
+            width: 30px;
+            height: 30px;
+            border: 3px solid rgba(0, 0, 0, 0.1);
+            border-radius: 50%;
+            border-top-color: #1890ff;
+            animation: spin 1s linear infinite;
+            margin: 0 auto 10px;
+        }
+
+        @keyframes spin {
+            to {
+                transform: rotate(360deg);
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="index.html">首页</a></li>
+                <li class="dropdown"><a href="details.html">走进非遗</a>
+                    <div class="dropdown-content">
+                        <a href="details.html?level=national">国家级非遗</a>
+                        <a href="details.html?level=provincial">省级非遗</a>
+                        <a href="details.html?level=municipal">市级非遗</a>
+                    </div>
+                </li>
+                <li><a href="map.html">非遗地图</a></li>
+                <li><a href="vip.html">VIP</a></li>
+            </ul>
+        </nav>
+    </header>
+    <div class="container">
+        <div class="header">
+            <h1>支付订单</h1>
+        </div>
+
+        <div class="order-info">
+            <div class="desc">订单号: <span id="orderNo">20230815123456</span></div>
+            <div class="desc">商品名称: <span id="productName">高级会员套餐</span></div>
+            <div class="amount">¥<span id="payAmount">99.00</span></div>
+        </div>
+
+        <div class="payment-methods">
+            <div class="payment-title">选择支付方式</div>
+
+            <div class="payment-method" data-method="alipay">
+                <img src="https://cdn.jsdelivr.net/gh/fe-jw/mock-images/payment/alipay.png" class="payment-icon">
+                <div class="payment-name">支付宝</div>
+                <div class="payment-radio selected"></div>
+            </div>
+
+            <div class="payment-method" data-method="wechat">
+                <img src="https://cdn.jsdelivr.net/gh/fe-jw/mock-images/payment/wechat.png" class="payment-icon">
+                <div class="payment-name">微信支付</div>
+                <div class="payment-radio"></div>
+            </div>
+
+            <div class="payment-method" data-method="unionpay">
+                <img src="https://cdn.jsdelivr.net/gh/fe-jw/mock-images/payment/unionpay.png" class="payment-icon">
+                <div class="payment-name">银联支付</div>
+                <div class="payment-radio"></div>
+            </div>
+        </div>
+
+        <button id="btnPay" class="btn-pay">立即支付</button>
+
+        <div class="loading" id="loading">
+            <div class="loading-spinner"></div>
+            <div>支付处理中，请稍候...</div>
+        </div>
+    </div>
+
+    <script>
+        // 当前选择的支付方式
+        let selectedMethod = 'alipay';
+
+        // 支付方式选择
+        document.querySelectorAll('.payment-method').forEach(method => {
+            method.addEventListener('click', function () {
+                // 更新UI
+                document.querySelectorAll('.payment-radio').forEach(radio => {
+                    radio.classList.remove('selected');
+                });
+                this.querySelector('.payment-radio').classList.add('selected');
+
+                // 更新选择的支付方式
+                selectedMethod = this.getAttribute('data-method');
+            });
+        });
+
+        // 支付按钮点击事件
+        document.getElementById('btnPay').addEventListener('click', function () {
+            const btn = this;
+            const loading = document.getElementById('loading');
+
+            // 禁用按钮，显示加载中
+            btn.disabled = true;
+            loading.style.display = 'block';
+
+            // 模拟支付请求
+            setTimeout(() => {
+                // 这里应该是实际的支付API调用
+                // 例如: callPaymentAPI(selectedMethod, orderNo, amount)
+
+                // 模拟支付成功
+                loading.style.display = 'none';
+                alert('支付成功！');
+
+                // 跳转到支付成功页面
+                window.location.href = 'payment-success.html?order=' + document.getElementById('orderNo').textContent;
+
+            }, 2000);
+        });
+
+        // 实际开发中可以从URL获取订单信息
+        function getOrderInfoFromURL() {
+            // 示例: 从URL参数获取订单信息
+            const params = new URLSearchParams(window.location.search);
+            const orderNo = params.get('order') || '20230815123456';
+            const amount = params.get('amount') || '99.00';
+
+            document.getElementById('orderNo').textContent = orderNo;
+            document.getElementById('payAmount').textContent = amount;
+        }
+
+        // 页面加载时获取订单信息
+        window.addEventListener('DOMContentLoaded', getOrderInfoFromURL);
+    </script>
+</body>
+
+</html>
